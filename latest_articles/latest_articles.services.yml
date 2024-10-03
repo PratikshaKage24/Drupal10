@@ -1,0 +1,5 @@
+services:
+  latest_articles.article_service:
+    class: '\Drupal\latest_articles\Service\ArticleService'
+    arguments: ['@entity_type.manager']
+

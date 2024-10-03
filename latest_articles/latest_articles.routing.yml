@@ -1,0 +1,8 @@
+latest_articles.content:
+  path: '/latest-articles'
+  defaults:
+    _controller: '\Drupal\latest_articles\Controller\LatestArticleController::getLatestArticles'
+    _title: 'Latest Articles'
+  requirements:
+    _permission: 'access content'
+
