@@ -1,0 +1,49 @@
+<?php
+
+use Drupal\Core\Database\Database;
+ 
+function registration_form_schema() {
+  $schema['registrationdata'] = [
+    'description' => 'Stores data for the registration form.',
+    'fields' => [
+      'id' => [
+        'type' => 'serial',
+        'not null' => TRUE,
+        'description' => 'Primary Key: Unique ID.',
+      ],
+      'first_name' => [
+        'type' => 'varchar',
+        'length' => 100,
+        'not null' => TRUE,
+        'description' => 'First name of the registrant.',
+      ],
+      'last_name' => [
+        'type' => 'varchar',
+        'length' => 100,
+        'not null' => TRUE,
+        'description' => 'Last name of the registrant.',
+      ],
+      'mobile' => [
+        'type' => 'varchar',
+        'length' => 10,
+        'not null' => TRUE,
+        'description' => 'Mobile number of the registrant.',
+      ],
+      'email' => [
+        'type' => 'varchar',
+        'length' => 150,
+        'not null' => TRUE,
+        'description' => 'Email address of the registrant.',
+      ],
+      'bio' => [
+        'type' => 'text',
+        'not null' => FALSE,
+        'description' => 'Bio of the registrant.',
+      ],
+    ],
+    'primary key' => ['id'],
+  ];
+
+  return $schema;
+}
+

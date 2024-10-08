@@ -1,0 +1,7 @@
+services:
+  registration_form.registration_service:
+    class: '\Drupal\registration_form\Service\RegistrationService'
+    arguments: ['@database']
+    permission: 'access'
+
+

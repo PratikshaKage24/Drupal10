@@ -1,0 +1,8 @@
+name: 'Registration Form'
+type: module
+description: 'Provides a custom multi-step registration form.'
+core_version_requirement: ^10 || ^11
+package: Custom
+dependencies:
+  - node
+
